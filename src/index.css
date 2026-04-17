@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rally-bg: #0c0c0c;
+  --color-rally-accent: #E30613;
+  --color-rally-stat-bg: #1a1a1a;
+  --color-rally-card-border: #333;
+  --color-rally-text-secondary: #a0a0a0;
+  
+  --font-display: "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: var(--color-rally-bg);
+  font-family: var(--font-body);
+}
+
+h1, .display-font {
+  font-family: var(--font-display);
+}
+
+.mono-font {
+  font-family: var(--font-mono);
+}
