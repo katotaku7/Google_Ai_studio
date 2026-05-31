@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
 @theme {
-  --color-rally-bg: #0c0c0c;
-  --color-rally-accent: #E30613;
-  --color-rally-stat-bg: #1a1a1a;
-  --color-rally-card-border: #333;
-  --color-rally-text-secondary: #a0a0a0;
-  
+  --color-bg:          #080808;
+  --color-surface:     #111111;
+  --color-border:      #1f1f1f;
+  --color-orange:      #FF6600;
+  --color-orange-dim:  #cc5200;
+  --color-muted:       #555555;
+  --color-text:        #e8e8e8;
+  --color-text-sub:    #888888;
+
   --font-display: "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  --font-mono: "Courier New", Courier, monospace;
+  --font-body:    system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", "Courier New", monospace;
 }
+
+* { box-sizing: border-box; }
 
 body {
-  background-color: var(--color-rally-bg);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, .display-font {
-  font-family: var(--font-display);
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(255,102,0,0.5); }
+  70%  { box-shadow: 0 0 0 12px rgba(255,102,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,102,0,0); }
 }
 
-.mono-font {
-  font-family: var(--font-mono);
+.recording-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
 }
