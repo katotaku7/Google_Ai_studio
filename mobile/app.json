@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Insta360 Scheduler",
+    "slug": "insta360-scheduler",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#080808",
+    "android": {
+      "package": "com.insta360.scheduler",
+      "adaptiveIcon": {
+        "backgroundColor": "#080808"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.insta360.scheduler",
+      "supportsTablet": false
+    },
+    "plugins": [
+      "expo-keep-awake"
+    ]
+  }
+}
